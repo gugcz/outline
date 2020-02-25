@@ -1,0 +1,35 @@
+name: Deploy [PROD] on DO droplet
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+
+  prepare-for-build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Update local files from Git
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd /root/outline
+          git update
+  execute-docker-compose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute docker-compose scenario
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /root/outline
+            make prod
