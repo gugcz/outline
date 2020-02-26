@@ -21,13 +21,13 @@ class Trash extends React.Component<Props> {
 
     return (
       <CenteredContent column auto>
-        <PageTitle title="Trash" />
-        <Heading>Trash</Heading>
+        <PageTitle title="Koš" />
+        <Heading>Koš</Heading>
         <PaginatedDocumentList
           documents={documents.deleted}
           fetch={documents.fetchDeleted}
-          heading={<Subheading>Documents</Subheading>}
-          empty={<Empty>Trash is empty at the moment.</Empty>}
+          heading={<Subheading>Dokumenty</Subheading>}
+          empty={<Empty>Koš je aktuálně prázdný</Empty>}
           showCollection
         />
       </CenteredContent>

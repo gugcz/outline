@@ -29,15 +29,15 @@ class Dashboard extends React.Component<Props> {
     return (
       <CenteredContent>
         <PageTitle title="Home" />
-        <h1>Home</h1>
+        <h1>Domů</h1>
         <Tabs>
           <Tab to="/dashboard" exact>
-            Recently updated
+            Nedávno upravené
           </Tab>
           <Tab to="/dashboard/recent" exact>
-            Recently viewed
+            Nedávno otevřené
           </Tab>
-          <Tab to="/dashboard/created">Created by me</Tab>
+          <Tab to="/dashboard/created">Vyvořeno mnou</Tab>
         </Tabs>
         <Switch>
           <Route path="/dashboard/recent">

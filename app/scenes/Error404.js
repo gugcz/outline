@@ -7,11 +7,11 @@ import Empty from 'components/Empty';
 const Error404 = () => {
   return (
     <CenteredContent>
-      <PageTitle title="Not Found" />
-      <h1>Not found</h1>
+      <PageTitle title="Nenalezeno" />
+      <h1>Nenalezeno</h1>
       <Empty>
-        We were unable to find the page you’re looking for. Go to the&nbsp;<a href="/">
-          homepage
+        Bohužel jsme stránku, na kterou se snažíš přistoupit, nenašli. Chceš jít&nbsp;<a href="/">
+          domů
         </a>?
       </Empty>
     </CenteredContent>

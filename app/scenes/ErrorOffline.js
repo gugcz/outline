@@ -9,7 +9,7 @@ const ErrorOffline = () => {
     <CenteredContent>
       <PageTitle title="Offline" />
       <h1>Offline</h1>
-      <Empty>We were unable to load the document while offline.</Empty>
+      <Empty>Nepodařilo se načíst stránku, nejspíše jsi offline.</Empty>
     </CenteredContent>
   );
 };

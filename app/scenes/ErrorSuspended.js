@@ -9,18 +9,18 @@ import AuthStore from 'stores/AuthStore';
 const ErrorSuspended = observer(({ auth }: { auth: AuthStore }) => {
   return (
     <CenteredContent>
-      <PageTitle title="Your account has been suspended" />
+      <PageTitle title="Tvůj účet byl pozastaven" />
       <h1>
         <span role="img" aria-label="Warning sign">
           ⚠️
         </span>{' '}
-        Your account has been suspended
+        Tvůj účet byl pozastaven.
       </h1>
 
       <p>
-        A team admin (<strong>{auth.suspendedContactEmail}</strong>) has
-        suspended your account. To re-activate your account, please reach out to
-        them directly.
+        Administrátoři (<strong>{auth.suspendedContactEmail}</strong>) pozastavili
+          tvůj účet. Pokud si myslíš, že se jedná o omyl, napiš na
+        admins@gug.cz nebo jakémukoliv Administrátorovi na Slacku.
       </p>
     </CenteredContent>
   );

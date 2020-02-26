@@ -45,8 +45,8 @@ class UserProfile extends React.Component<Props> {
       >
         <Flex column>
           <Meta>
-            {isCurrentUser ? 'You joined' : 'Joined'}{' '}
-            {distanceInWordsToNow(new Date(user.createdAt))} ago.
+            {isCurrentUser ? 'Členem od' : 'Členem'}{' '}
+            {distanceInWordsToNow(new Date(user.createdAt))}.
             {user.isAdmin && (
               <StyledBadge admin={user.isAdmin}>Admin</StyledBadge>
             )}
@@ -58,7 +58,7 @@ class UserProfile extends React.Component<Props> {
                   icon={<EditIcon />}
                   neutral
                 >
-                  Edit Profile
+                  Upravit profil
                 </Button>
               </Edit>
             )}
@@ -67,9 +67,9 @@ class UserProfile extends React.Component<Props> {
             documents={documents.createdByUser(user.id)}
             fetch={documents.fetchOwned}
             options={{ user: user.id }}
-            heading={<Subheading>Recently updated</Subheading>}
+            heading={<Subheading>Nedávno upravené</Subheading>}
             empty={
-              <HelpText>{user.name} hasn’t updated any documents yet.</HelpText>
+              <HelpText>{user.name} nenahrál žádné dokumenty.</HelpText>
             }
             showCollection
           />
